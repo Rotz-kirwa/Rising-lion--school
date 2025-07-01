@@ -3,8 +3,10 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: './',
   build: {
-    minify: 'terser',
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -12,8 +14,5 @@ export default defineConfig({
         },
       },
     },
-  },
-  server: {
-    compress: true,
   },
 })
