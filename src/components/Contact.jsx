@@ -87,7 +87,7 @@ export default function Contact() {
               <p style={{color: '#6b7280', fontSize: '16px'}}>We'd love to hear from you. Get in touch with us!</p>
             </div>
             
-            <form action="mailto:gadielkirwa@gmail.com" method="post" encType="text/plain">
+            <form action="https://formspree.io/f/xpwzgqko" method="POST">
               <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '20px'}}>
                 <div>
                   <label style={{display: 'block', fontWeight: '600', color: '#374151', marginBottom: '8px', fontSize: '14px'}}>First Name *</label>

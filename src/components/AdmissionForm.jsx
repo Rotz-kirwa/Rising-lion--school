@@ -8,7 +8,7 @@ export default function AdmissionForm() {
         </div>
 
         <div className="card" style={{maxWidth: '800px', margin: '0 auto'}}>
-          <form>
+          <form action="https://formspree.io/f/xpwzgqko" method="POST">
             
             <h3 style={{color: '#1e3a8a', marginBottom: '20px', borderBottom: '2px solid #1e3a8a', paddingBottom: '10px'}}>1. Student Information</h3>
             <div className="grid grid-2">
@@ -179,24 +179,7 @@ export default function AdmissionForm() {
               </p>
             </div>
 
-            <button 
-              type="button" 
-              className="btn" 
-              style={{width: '100%', background: '#1e3a8a', color: 'white', padding: '15px', fontSize: '18px'}}
-              onClick={() => {
-                const form = document.querySelector('form');
-                const formData = new FormData(form);
-                let emailBody = 'RISING LION ACADEMY - STUDENT ADMISSION APPLICATION\n\n';
-                
-                for (let [key, value] of formData.entries()) {
-                  emailBody += `${key}: ${value}\n`;
-                }
-                
-                const subject = 'Student Admission Application - Rising Lion Academy';
-                const mailtoLink = `mailto:gadielkirwa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-                window.location.href = mailtoLink;
-              }}
-            >
+            <button type="submit" className="btn" style={{width: '100%', background: '#1e3a8a', color: 'white', padding: '15px', fontSize: '18px'}}>
               Submit Application
             </button>
           </form>
