@@ -74,18 +74,20 @@ export default function About() {
           <p style={{textAlign: 'center', fontStyle: 'italic', color: '#fbbf24'}}>— Mrs. Jane A. Kimani, Headteacher</p>
         </div>
 
-        <div style={{display: 'flex', justifyContent: 'center', gap: '64px', flexWrap: 'wrap', textAlign: 'center'}}>
-          <div>
-            <div style={{fontSize: '48px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>500+</div>
-            <div style={{color: '#6b7280', fontSize: '16px', fontWeight: '500'}}>Students</div>
-          </div>
-          <div>
-            <div style={{fontSize: '48px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>50+</div>
-            <div style={{color: '#6b7280', fontSize: '16px', fontWeight: '500'}}>Teachers</div>
-          </div>
-          <div>
-            <div style={{fontSize: '48px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>90%</div>
-            <div style={{color: '#6b7280', fontSize: '16px', fontWeight: '500'}}>Job Entry</div>
+        <div className="card" style={{background: '#f8fafc', padding: '40px 20px'}}>
+          <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', gap: '32px', textAlign: 'center', maxWidth: '600px', margin: '0 auto'}}>
+            <div style={{minWidth: '120px'}}>
+              <div style={{fontSize: '40px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>500+</div>
+              <div style={{color: '#6b7280', fontSize: '16px', fontWeight: '500'}}>Students</div>
+            </div>
+            <div style={{minWidth: '120px'}}>
+              <div style={{fontSize: '40px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>50+</div>
+              <div style={{color: '#6b7280', fontSize: '16px', fontWeight: '500'}}>Teachers</div>
+            </div>
+            <div style={{minWidth: '120px'}}>
+              <div style={{fontSize: '40px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>90%</div>
+              <div style={{color: '#6b7280', fontSize: '16px', fontWeight: '500'}}>Job Entry</div>
+            </div>
           </div>
         </div>
       </div>
