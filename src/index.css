@@ -73,6 +73,64 @@
   .touch-target {
     @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
   }
+  
+  /* Responsive image optimization */
+  .responsive-img {
+    @apply max-w-full h-auto object-cover;
+  }
+  
+  /* Flexible containers */
+  .flex-container {
+    @apply flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8;
+  }
+  
+  /* Responsive text */
+  .text-responsive {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+  
+  .heading-responsive {
+    @apply text-xl sm:text-2xl lg:text-3xl xl:text-4xl;
+  }
+  
+  /* Mobile-optimized spacing */
+  .spacing-mobile {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+  
+  .margin-mobile {
+    @apply m-4 sm:m-6 lg:m-8;
+  }
+}
+
+@layer utilities {
+  /* Custom responsive utilities */
+  .border-3 {
+    border-width: 3px;
+  }
+  
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  /* Mobile-first breakpoint helpers */
+  @media (max-width: 640px) {
+    .mobile-only {
+      display: block;
+    }
+    .mobile-hidden {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 641px) {
+    .mobile-only {
+      display: none;
+    }
+    .mobile-hidden {
+      display: block;
+    }
+  }
 }
 
 * {

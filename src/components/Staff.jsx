@@ -20,24 +20,22 @@ export default function Staff() {
           </p>
         </div>
 
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px'}}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6">
           {teachers.map((teacher, index) => (
-            <div key={index} style={{textAlign: 'center', minWidth: '200px', maxWidth: '220px', flex: '1'}}>
-              <div className="card">
-                <div style={{width: '150px', height: '150px', margin: '0 auto 16px', borderRadius: '12px', overflow: 'hidden', border: '3px solid #1e3a8a', boxShadow: '0 4px 15px rgba(30, 58, 138, 0.2)'}}>
-                  <img 
-                    src={teacher.image} 
-                    alt={teacher.name}
-                    style={{width: '100%', height: '100%', objectFit: 'cover'}}
-                  />
-                </div>
-                <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>
-                  {teacher.name}
-                </h3>
-                <p style={{color: '#6b7280', fontWeight: '600', fontSize: '14px'}}>
-                  {teacher.subject}
-                </p>
+            <div key={index} className="card text-center">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-3 rounded-xl overflow-hidden border-3 border-blue-900 shadow-lg">
+                <img 
+                  src={teacher.image} 
+                  alt={teacher.name}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-blue-900 mb-1 sm:mb-2">
+                {teacher.name}
+              </h3>
+              <p className="text-gray-600 font-semibold text-xs sm:text-sm">
+                {teacher.subject}
+              </p>
             </div>
           ))}
         </div>

@@ -23,51 +23,24 @@ export default function Tour() {
           </p>
         </div>
 
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px'}}>
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 lg:gap-6">
           {facilities.map((facility, index) => (
-            <div key={index} style={{textAlign: 'center', minWidth: '180px', maxWidth: '200px', flex: '1'}}>
-              <div className="card">
-                <div style={{position: 'relative', marginBottom: '16px'}}>
-                  <div style={{width: '140px', height: '140px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', border: '3px solid #1e3a8a', boxShadow: '0 4px 15px rgba(30, 58, 138, 0.2)'}}>
-                    <img 
-                      src={facility.image} 
-                      alt={facility.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        transition: 'transform 0.3s ease'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.transform = 'scale(1.1)'
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.transform = 'scale(1)'
-                      }}
-                    />
-                  </div>
-                  <div style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    right: '20px',
-                    background: '#fbbf24',
-                    borderRadius: '50%',
-                    width: '35px',
-                    height: '35px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '18px',
-                    border: '2px solid white',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
-                  }}>
-                    {facility.icon}
-                  </div>
+            <div key={index} className="card text-center p-3 sm:p-4">
+              <div className="relative mb-3">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mx-auto rounded-xl overflow-hidden border-3 border-blue-900 shadow-lg">
+                  <img 
+                    src={facility.image} 
+                    alt={facility.name}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-                <h3 style={{fontSize: '16px', fontWeight: 'bold', color: '#1e3a8a', margin: '0'}}>
-                  {facility.name}
-                </h3>
+                <div className="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm border-2 border-white shadow-lg">
+                  {facility.icon}
+                </div>
               </div>
+              <h3 className="text-xs sm:text-sm lg:text-base font-bold text-blue-900 leading-tight">
+                {facility.name}
+              </h3>
             </div>
           ))}
         </div>
