@@ -55,16 +55,16 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div ref={menuRef} style={{padding: '16px 20px', animation: 'fadeIn 0.3s ease'}}>
-          <nav style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
-            <a href="#home" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Home</a>
-            <a href="#about" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>About</a>
-            <a href="#academics" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Academics</a>
-            <a href="#staff" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Staff</a>
-            <a href="#tour" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Tour</a>
-            <a href="#admission" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Admission</a>
-            <a href="#news" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>News</a>
-            <a href="#contact" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Contact</a>
+        <div ref={menuRef} style={{padding: '16px 20px', animation: 'fadeIn 0.3s ease', overflowX: 'auto'}}>
+          <nav style={{display: 'flex', flexDirection: 'row', gap: '16px', justifyContent: 'flex-end', whiteSpace: 'nowrap'}}>
+            <a href="#home" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>Home</a>
+            <a href="#about" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>About</a>
+            <a href="#academics" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>Academics</a>
+            <a href="#staff" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>Staff</a>
+            <a href="#tour" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>Tour</a>
+            <a href="#admission" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>Admission</a>
+            <a href="#news" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>News</a>
+            <a href="#contact" style={{padding: '8px 12px', color: '#4b5563', textDecoration: 'none', flexShrink: 0}}>Contact</a>
           </nav>
         </div>
       )}
