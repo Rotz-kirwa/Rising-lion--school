@@ -4,6 +4,77 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-3 sm:px-6 sm:py-3 rounded-lg font-semibold transition-all duration-300 min-h-[48px] cursor-pointer text-center w-full sm:w-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-900 to-blue-600 text-white hover:shadow-lg hover:-translate-y-0.5 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-blue-900 border-2 border-blue-900 hover:bg-blue-900 hover:text-white active:scale-95;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-full;
+  }
+  
+  .section {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+  
+  .section-gray {
+    @apply bg-gray-50;
+  }
+  
+  .section-blue {
+    @apply bg-blue-900 text-white;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-header {
+    @apply text-center mb-8 sm:mb-12 lg:mb-16;
+  }
+  
+  .section-header h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900 mb-3 sm:mb-4;
+  }
+  
+  .section-header p {
+    @apply text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed;
+  }
+  
+  /* Mobile-first grid layouts */
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+  
+  .mobile-flex {
+    @apply flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6;
+  }
+  
+  /* Touch-friendly elements */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
