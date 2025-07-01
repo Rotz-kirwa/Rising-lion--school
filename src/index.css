@@ -59,13 +59,32 @@ body {
 .logo-responsive {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.logo-icon-responsive span {
+  font-size: 3rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.logo-icon-responsive span:hover {
+  transform: scale(1.1);
 }
 
 .logo-responsive h1 {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 1.9rem;
+  font-weight: 900;
   color: #1e3a8a;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav-responsive {
@@ -142,8 +161,8 @@ body {
   }
   
   .grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
   }
   
   .hero h1 {
@@ -176,12 +195,29 @@ body {
     font-size: 1.4rem;
   }
   
+  .logo-icon-responsive span {
+    font-size: 2.2rem;
+  }
+  
+  .logo-responsive {
+    gap: 12px;
+  }
+  
   .header-content-responsive {
     padding: 0 16px;
   }
   
   .hero h1 {
     font-size: 1.6rem !important;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .card {
+    padding: 16px !important;
   }
 }
 
@@ -219,4 +255,27 @@ body {
 
 html {
   scroll-padding-top: 80px;
+}
+
+/* Universal Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0 20px !important;
+  }
+  
+  .container {
+    padding: 0 12px;
+  }
 }

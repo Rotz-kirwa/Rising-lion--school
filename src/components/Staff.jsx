@@ -20,50 +20,24 @@ export default function Staff() {
           </p>
         </div>
 
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '32px', marginBottom: '32px'}}>
-          {teachers.slice(0, 4).map((teacher, index) => (
-            <div key={index} className="card text-center">
-              <img 
-                src={teacher.image} 
-                alt={teacher.name}
-                style={{
-                  width: '120px',
-                  height: '120px',
-                  borderRadius: '50%',
-                  margin: '0 auto 16px',
-                  objectFit: 'cover'
-                }}
-              />
-              <h3 style={{fontSize: '20px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>
-                {teacher.name}
-              </h3>
-              <p style={{color: '#6b7280', fontWeight: '600'}}>
-                {teacher.subject}
-              </p>
-            </div>
-          ))}
-        </div>
-        
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '32px'}}>
-          {teachers.slice(4, 8).map((teacher, index) => (
-            <div key={index} className="card text-center">
-              <img 
-                src={teacher.image} 
-                alt={teacher.name}
-                style={{
-                  width: '120px',
-                  height: '120px',
-                  borderRadius: '50%',
-                  margin: '0 auto 16px',
-                  objectFit: 'cover'
-                }}
-              />
-              <h3 style={{fontSize: '20px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>
-                {teacher.name}
-              </h3>
-              <p style={{color: '#6b7280', fontWeight: '600'}}>
-                {teacher.subject}
-              </p>
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px'}}>
+          {teachers.map((teacher, index) => (
+            <div key={index} style={{textAlign: 'center', minWidth: '200px', maxWidth: '220px', flex: '1'}}>
+              <div className="card">
+                <div style={{width: '150px', height: '150px', margin: '0 auto 16px', borderRadius: '12px', overflow: 'hidden', border: '3px solid #1e3a8a', boxShadow: '0 4px 15px rgba(30, 58, 138, 0.2)'}}>
+                  <img 
+                    src={teacher.image} 
+                    alt={teacher.name}
+                    style={{width: '100%', height: '100%', objectFit: 'cover'}}
+                  />
+                </div>
+                <h3 style={{fontSize: '18px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '8px'}}>
+                  {teacher.name}
+                </h3>
+                <p style={{color: '#6b7280', fontWeight: '600', fontSize: '14px'}}>
+                  {teacher.subject}
+                </p>
+              </div>
             </div>
           ))}
         </div>

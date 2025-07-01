@@ -23,50 +23,51 @@ export default function Tour() {
           </p>
         </div>
 
-        <div className="tour-container">
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px'}}>
           {facilities.map((facility, index) => (
-            <div key={index} className="tour-item" style={{textAlign: 'center'}}>
-              <div style={{position: 'relative', marginBottom: '16px'}}>
-                <img 
-                  src={facility.image} 
-                  alt={facility.name}
-                  style={{
-                    width: '150px',
-                    height: '150px',
+            <div key={index} style={{textAlign: 'center', minWidth: '180px', maxWidth: '200px', flex: '1'}}>
+              <div className="card">
+                <div style={{position: 'relative', marginBottom: '16px'}}>
+                  <div style={{width: '140px', height: '140px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', border: '3px solid #1e3a8a', boxShadow: '0 4px 15px rgba(30, 58, 138, 0.2)'}}>
+                    <img 
+                      src={facility.image} 
+                      alt={facility.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        transition: 'transform 0.3s ease'
+                      }}
+                      onMouseOver={(e) => {
+                        e.target.style.transform = 'scale(1.1)'
+                      }}
+                      onMouseOut={(e) => {
+                        e.target.style.transform = 'scale(1)'
+                      }}
+                    />
+                  </div>
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '20px',
+                    right: '20px',
+                    background: '#fbbf24',
                     borderRadius: '50%',
-                    objectFit: 'cover',
-                    border: '4px solid #1e3a8a',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.transform = 'scale(1.1)'
-                    e.target.style.boxShadow = '0 8px 25px rgba(30, 58, 138, 0.3)'
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.transform = 'scale(1)'
-                    e.target.style.boxShadow = 'none'
-                  }}
-                />
-                <div style={{
-                  position: 'absolute',
-                  bottom: '10px',
-                  right: '10px',
-                  background: '#fbbf24',
-                  borderRadius: '50%',
-                  width: '40px',
-                  height: '40px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '20px',
-                  border: '2px solid white'
-                }}>
-                  {facility.icon}
+                    width: '35px',
+                    height: '35px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '18px',
+                    border: '2px solid white',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+                  }}>
+                    {facility.icon}
+                  </div>
                 </div>
+                <h3 style={{fontSize: '16px', fontWeight: 'bold', color: '#1e3a8a', margin: '0'}}>
+                  {facility.name}
+                </h3>
               </div>
-              <h3 style={{fontSize: '16px', fontWeight: 'bold', color: '#1e3a8a', margin: '0'}}>
-                {facility.name}
-              </h3>
             </div>
           ))}
         </div>
