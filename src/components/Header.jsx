@@ -45,9 +45,6 @@ export default function Header() {
             <a href="#admission" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Admission</a>
             <a href="#news" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>News</a>
             <a href="#contact" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Contact</a>
-            <button className="btn btn-primary" style={{marginTop: '8px', width: '100%'}}>
-              Portal Login
-            </button>
           </nav>
         </div>
       )}
