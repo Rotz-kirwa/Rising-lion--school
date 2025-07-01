@@ -1,13 +1,31 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false)
+      }
+    }
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
 
   return (
-    <header className="header">
+    <header className="header" role="banner">
       <div className="header-content">
         <div className="logo">
-          <div className="logo-icon">
+          <div className="logo-icon" aria-label="Rising Lion Academy logo" role="img">
             <span>🦁</span>
           </div>
           <div>
@@ -15,7 +33,7 @@ export default function Header() {
           </div>
         </div>
         
-        <nav className="nav">
+        <nav className="nav" role="navigation" aria-label="Primary navigation">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#academics">Academics</a>
@@ -28,6 +46,8 @@ export default function Header() {
 
         <button 
           className="mobile-menu"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span>☰</span>
@@ -35,7 +55,7 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div style={{padding: '16px 20px'}}>
+        <div ref={menuRef} style={{padding: '16px 20px', animation: 'fadeIn 0.3s ease'}}>
           <nav style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
             <a href="#home" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>Home</a>
             <a href="#about" style={{padding: '8px 0', color: '#4b5563', textDecoration: 'none'}}>About</a>
@@ -48,6 +68,14 @@ export default function Header() {
           </nav>
         </div>
       )}
+      <style>
+        {`
+          @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+          }
+        `}
+      </style>
     </header>
   )
 }

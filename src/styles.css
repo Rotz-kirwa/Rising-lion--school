@@ -591,3 +591,33 @@
     text-align: center;
   }
 }
+
+/* Tablet and large phone styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
