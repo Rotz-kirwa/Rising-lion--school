@@ -660,14 +660,17 @@
     scroll-snap-align: start;
   }
   
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
+  .tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
-    text-align: center;
+  }
+  .tour-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
   }
 }
 

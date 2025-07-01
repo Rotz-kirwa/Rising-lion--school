@@ -23,9 +23,9 @@ export default function Tour() {
           </p>
         </div>
 
-        <div style={{display: 'flex', flexWrap: 'wrap', gap: '24px', justifyContent: 'center'}}>
+        <div className="tour-container">
           {facilities.map((facility, index) => (
-            <div key={index} style={{textAlign: 'center', width: '180px'}}>
+            <div key={index} className="tour-item" style={{textAlign: 'center'}}>
               <div style={{position: 'relative', marginBottom: '16px'}}>
                 <img 
                   src={facility.image} 
