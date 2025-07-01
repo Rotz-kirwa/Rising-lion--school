@@ -129,10 +129,10 @@ export default function CourseCatalog() {
             Contact our admissions team to learn more about course requirements and enrollment procedures.
           </p>
           <div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
-            <a href="#contact" className="btn btn-primary" style={{textDecoration: 'none'}}>
+            <a href="#contact" style={{textDecoration: 'none', background: '#f97316', color: 'white', padding: '12px 24px', borderRadius: '8px', fontWeight: '600', transition: 'all 0.3s ease'}}>
               Contact Admissions
             </a>
-            <a href="#admission-form" className="btn btn-secondary" style={{textDecoration: 'none'}}>
+            <a href="#admission-form" style={{textDecoration: 'none', background: '#10b981', color: 'white', padding: '12px 24px', borderRadius: '8px', fontWeight: '600', transition: 'all 0.3s ease'}}>
               Apply Now
             </a>
           </div>
