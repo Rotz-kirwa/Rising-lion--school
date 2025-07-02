@@ -19,22 +19,32 @@ export default function Academics() {
         </div>
 
         <div className="space-y-4">
-          <div className="grid grid-cols-3 gap-3">
-            {programs.slice(0, 3).map((program, index) => (
+          <div className="grid grid-cols-2 gap-4">
+            {programs.slice(0, 2).map((program, index) => (
               <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
-                <div className="text-3xl mb-3">{program.icon}</div>
-                <h3 className="text-sm font-bold text-blue-900 mb-2">{program.title}</h3>
-                <p className="text-xs text-gray-600 leading-tight">{program.desc}</p>
+                <div className="text-4xl mb-3">{program.icon}</div>
+                <h3 className="text-base font-bold text-blue-900 mb-2">{program.title}</h3>
+                <p className="text-sm text-gray-600 leading-tight">{program.desc}</p>
               </div>
             ))}
           </div>
           
-          <div className="grid grid-cols-3 gap-3">
-            {programs.slice(3, 6).map((program, index) => (
+          <div className="grid grid-cols-2 gap-4">
+            {programs.slice(2, 4).map((program, index) => (
               <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
-                <div className="text-3xl mb-3">{program.icon}</div>
-                <h3 className="text-sm font-bold text-blue-900 mb-2">{program.title}</h3>
-                <p className="text-xs text-gray-600 leading-tight">{program.desc}</p>
+                <div className="text-4xl mb-3">{program.icon}</div>
+                <h3 className="text-base font-bold text-blue-900 mb-2">{program.title}</h3>
+                <p className="text-sm text-gray-600 leading-tight">{program.desc}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4">
+            {programs.slice(4, 6).map((program, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="text-4xl mb-3">{program.icon}</div>
+                <h3 className="text-base font-bold text-blue-900 mb-2">{program.title}</h3>
+                <p className="text-sm text-gray-600 leading-tight">{program.desc}</p>
               </div>
             ))}
           </div>

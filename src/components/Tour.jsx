@@ -24,71 +24,29 @@ export default function Tour() {
         </div>
 
         <div className="space-y-4">
-          <div className="grid grid-cols-4 gap-3">
-            {facilities.slice(0, 4).map((facility, index) => (
-              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
-                <div className="relative mb-2">
-                  <div className="w-16 h-16 mx-auto rounded-lg overflow-hidden border-2 border-blue-900">
-                    <img 
-                      src={facility.image} 
-                      alt={facility.name}
-                      className="w-full h-full object-cover"
-                    />
+          {Array.from({ length: Math.ceil(facilities.length / 2) }, (_, rowIndex) => (
+            <div key={rowIndex} className="grid grid-cols-2 gap-4">
+              {facilities.slice(rowIndex * 2, rowIndex * 2 + 2).map((facility, index) => (
+                <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                  <div className="relative mb-3">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-lg overflow-hidden border-2 border-blue-900">
+                      <img 
+                        src={facility.image} 
+                        alt={facility.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full w-6 h-6 flex items-center justify-center text-xs border border-white">
+                      {facility.icon}
+                    </div>
                   </div>
-                  <div className="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full w-5 h-5 flex items-center justify-center text-xs border border-white">
-                    {facility.icon}
-                  </div>
+                  <h3 className="text-sm font-bold text-blue-900 leading-tight">
+                    {facility.name}
+                  </h3>
                 </div>
-                <h3 className="text-xs font-bold text-blue-900 leading-tight">
-                  {facility.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-4 gap-3">
-            {facilities.slice(4, 8).map((facility, index) => (
-              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
-                <div className="relative mb-2">
-                  <div className="w-16 h-16 mx-auto rounded-lg overflow-hidden border-2 border-blue-900">
-                    <img 
-                      src={facility.image} 
-                      alt={facility.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full w-5 h-5 flex items-center justify-center text-xs border border-white">
-                    {facility.icon}
-                  </div>
-                </div>
-                <h3 className="text-xs font-bold text-blue-900 leading-tight">
-                  {facility.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-3 gap-3">
-            {facilities.slice(8, 11).map((facility, index) => (
-              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
-                <div className="relative mb-2">
-                  <div className="w-16 h-16 mx-auto rounded-lg overflow-hidden border-2 border-blue-900">
-                    <img 
-                      src={facility.image} 
-                      alt={facility.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full w-5 h-5 flex items-center justify-center text-xs border border-white">
-                    {facility.icon}
-                  </div>
-                </div>
-                <h3 className="text-xs font-bold text-blue-900 leading-tight">
-                  {facility.name}
-                </h3>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ))}
         </div>
 
         <div className="text-center" style={{marginTop: '48px'}}>

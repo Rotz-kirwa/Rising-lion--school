@@ -21,40 +21,80 @@ export default function Staff() {
         </div>
 
         <div className="space-y-4">
-          <div className="grid grid-cols-4 gap-3 sm:gap-4">
-            {teachers.slice(0, 4).map((teacher, index) => (
-              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-lg overflow-hidden border-2 border-blue-900">
+          <div className="grid grid-cols-2 gap-4">
+            {teachers.slice(0, 2).map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-lg overflow-hidden border-2 border-blue-900">
                   <img 
                     src={teacher.image} 
                     alt={teacher.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xs sm:text-sm font-bold text-blue-900 mb-1 leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-blue-900 mb-2 leading-tight">
                   {teacher.name}
                 </h3>
-                <p className="text-gray-600 font-medium text-xs leading-tight">
+                <p className="text-gray-600 font-medium text-xs sm:text-sm leading-tight">
                   {teacher.subject}
                 </p>
               </div>
             ))}
           </div>
           
-          <div className="grid grid-cols-4 gap-3 sm:gap-4">
-            {teachers.slice(4, 8).map((teacher, index) => (
-              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-lg overflow-hidden border-2 border-blue-900">
+          <div className="grid grid-cols-2 gap-4">
+            {teachers.slice(2, 4).map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-lg overflow-hidden border-2 border-blue-900">
                   <img 
                     src={teacher.image} 
                     alt={teacher.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xs sm:text-sm font-bold text-blue-900 mb-1 leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-blue-900 mb-2 leading-tight">
                   {teacher.name}
                 </h3>
-                <p className="text-gray-600 font-medium text-xs leading-tight">
+                <p className="text-gray-600 font-medium text-xs sm:text-sm leading-tight">
+                  {teacher.subject}
+                </p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4">
+            {teachers.slice(4, 6).map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-lg overflow-hidden border-2 border-blue-900">
+                  <img 
+                    src={teacher.image} 
+                    alt={teacher.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-blue-900 mb-2 leading-tight">
+                  {teacher.name}
+                </h3>
+                <p className="text-gray-600 font-medium text-xs sm:text-sm leading-tight">
+                  {teacher.subject}
+                </p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4">
+            {teachers.slice(6, 8).map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-lg overflow-hidden border-2 border-blue-900">
+                  <img 
+                    src={teacher.image} 
+                    alt={teacher.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-blue-900 mb-2 leading-tight">
+                  {teacher.name}
+                </h3>
+                <p className="text-gray-600 font-medium text-xs sm:text-sm leading-tight">
                   {teacher.subject}
                 </p>
               </div>
