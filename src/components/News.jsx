@@ -1,4 +1,8 @@
 export default function News() {
+  const handleViewAllEvents = () => {
+    alert('View All Events - This would typically navigate to a full events page or open a modal with all events.')
+  }
+
   const news = [
     {
       date: 'Dec 15, 2023',
@@ -77,7 +81,10 @@ export default function News() {
                       </div>
                     ))}
                   </div>
-                  <button className="w-full mt-4 bg-blue-900 text-white py-3 rounded-lg font-medium text-sm hover:bg-blue-800 transition-colors">
+                  <button 
+                    onClick={handleViewAllEvents}
+                    className="w-full mt-4 bg-blue-900 text-white py-3 rounded-lg font-medium text-sm hover:bg-blue-800 transition-colors active:scale-95"
+                  >
                     View All Events
                   </button>
                 </div>
@@ -123,7 +130,10 @@ export default function News() {
                     </div>
                   ))}
                 </div>
-                <button className="w-full mt-6 bg-blue-900 text-white py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors">
+                <button 
+                  onClick={handleViewAllEvents}
+                  className="w-full mt-6 bg-blue-900 text-white py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors active:scale-95"
+                >
                   View All Events
                 </button>
               </div>
