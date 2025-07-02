@@ -18,14 +18,26 @@ export default function Academics() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
-          {programs.map((program, index) => (
-            <div key={index} className="card text-center p-4">
-              <div className="text-3xl sm:text-4xl mb-3">{program.icon}</div>
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-blue-900 mb-2">{program.title}</h3>
-              <p className="text-xs sm:text-sm text-gray-600 leading-tight">{program.desc}</p>
-            </div>
-          ))}
+        <div className="space-y-4">
+          <div className="grid grid-cols-3 gap-3">
+            {programs.slice(0, 3).map((program, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="text-3xl mb-3">{program.icon}</div>
+                <h3 className="text-sm font-bold text-blue-900 mb-2">{program.title}</h3>
+                <p className="text-xs text-gray-600 leading-tight">{program.desc}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-3 gap-3">
+            {programs.slice(3, 6).map((program, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <div className="text-3xl mb-3">{program.icon}</div>
+                <h3 className="text-sm font-bold text-blue-900 mb-2">{program.title}</h3>
+                <p className="text-xs text-gray-600 leading-tight">{program.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div style={{marginTop: '64px', background: '#1e3a8a', color: 'white', padding: '32px', borderRadius: '16px'}}>
