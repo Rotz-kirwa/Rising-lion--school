@@ -18,14 +18,12 @@ export default function Academics() {
           </p>
         </div>
 
-        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px'}}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {programs.map((program, index) => (
-            <div key={index} style={{textAlign: 'center', minWidth: '180px', flex: '1', maxWidth: '200px'}}>
-              <div className="program-card">
-                <div className="icon">{program.icon}</div>
-                <h3>{program.title}</h3>
-                <p>{program.desc}</p>
-              </div>
+            <div key={index} className="card text-center p-4">
+              <div className="text-3xl sm:text-4xl mb-3">{program.icon}</div>
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-blue-900 mb-2">{program.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-tight">{program.desc}</p>
             </div>
           ))}
         </div>

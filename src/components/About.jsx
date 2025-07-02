@@ -35,31 +35,31 @@ export default function About() {
 
         <div className="card" style={{marginBottom: '48px', textAlign: 'center'}}>
           <h3 style={{fontSize: '28px', fontWeight: 'bold', color: '#1e3a8a', marginBottom: '32px'}}>Core Values</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto">
-            <div className="text-center p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">🎯</div>
-              <h4 className="text-blue-900 font-bold mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg">Excellence</h4>
-              <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">Pursuing the highest standards in academics and character.</p>
+          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto">
+            <div className="text-center p-2 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">🎯</div>
+              <h4 className="text-blue-900 font-bold mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base">Excellence</h4>
+              <p className="text-gray-600 text-xs sm:text-xs lg:text-sm leading-tight sm:leading-relaxed">High standards in academics.</p>
             </div>
-            <div className="text-center p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">👑</div>
-              <h4 className="text-blue-900 font-bold mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg">Leadership</h4>
-              <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">Empowering students to lead with courage, vision, and service.</p>
+            <div className="text-center p-2 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">👑</div>
+              <h4 className="text-blue-900 font-bold mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base">Leadership</h4>
+              <p className="text-gray-600 text-xs sm:text-xs lg:text-sm leading-tight sm:leading-relaxed">Courage and vision.</p>
             </div>
-            <div className="text-center p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">🤝</div>
-              <h4 className="text-blue-900 font-bold mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg">Integrity</h4>
-              <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">Promoting honesty, accountability, and ethical decision-making.</p>
+            <div className="text-center p-2 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">🤝</div>
+              <h4 className="text-blue-900 font-bold mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base">Integrity</h4>
+              <p className="text-gray-600 text-xs sm:text-xs lg:text-sm leading-tight sm:leading-relaxed">Honesty and ethics.</p>
             </div>
-            <div className="text-center p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">💡</div>
-              <h4 className="text-blue-900 font-bold mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg">Innovation</h4>
-              <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">Encouraging creativity, curiosity, and adaptability.</p>
+            <div className="text-center p-2 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">💡</div>
+              <h4 className="text-blue-900 font-bold mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base">Innovation</h4>
+              <p className="text-gray-600 text-xs sm:text-xs lg:text-sm leading-tight sm:leading-relaxed">Creativity and curiosity.</p>
             </div>
-            <div className="text-center p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">❤️</div>
-              <h4 className="text-blue-900 font-bold mb-2 sm:mb-3 text-sm sm:text-base lg:text-lg">Respect</h4>
-              <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed">Cultivating empathy, kindness, and appreciation for diversity.</p>
+            <div className="text-center p-2 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">❤️</div>
+              <h4 className="text-blue-900 font-bold mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base">Respect</h4>
+              <p className="text-gray-600 text-xs sm:text-xs lg:text-sm leading-tight sm:leading-relaxed">Empathy and kindness.</p>
             </div>
           </div>
         </div>

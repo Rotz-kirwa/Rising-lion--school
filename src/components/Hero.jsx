@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
       <div className="absolute inset-0 bg-blue-900/10 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
       
-      <div className="relative container flex flex-col lg:flex-row items-center justify-between min-h-screen pt-20 pb-12">
+      <div className="relative container flex flex-col lg:flex-row items-center justify-between min-h-screen pt-24 sm:pt-28 lg:pt-20 pb-12">
         <div className="flex-1 text-center lg:text-left mb-12 lg:mb-0 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
             Empowering Minds,
