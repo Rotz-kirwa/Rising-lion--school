@@ -20,24 +20,46 @@ export default function Staff() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6">
-          {teachers.map((teacher, index) => (
-            <div key={index} className="card text-center">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-3 rounded-xl overflow-hidden border-3 border-blue-900 shadow-lg">
-                <img 
-                  src={teacher.image} 
-                  alt={teacher.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+        <div className="space-y-4">
+          <div className="grid grid-cols-4 gap-3 sm:gap-4">
+            {teachers.slice(0, 4).map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-lg overflow-hidden border-2 border-blue-900">
+                  <img 
+                    src={teacher.image} 
+                    alt={teacher.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xs sm:text-sm font-bold text-blue-900 mb-1 leading-tight">
+                  {teacher.name}
+                </h3>
+                <p className="text-gray-600 font-medium text-xs leading-tight">
+                  {teacher.subject}
+                </p>
               </div>
-              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-blue-900 mb-1 sm:mb-2">
-                {teacher.name}
-              </h3>
-              <p className="text-gray-600 font-semibold text-xs sm:text-sm">
-                {teacher.subject}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          <div className="grid grid-cols-4 gap-3 sm:gap-4">
+            {teachers.slice(4, 8).map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-3 text-center shadow-sm">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-lg overflow-hidden border-2 border-blue-900">
+                  <img 
+                    src={teacher.image} 
+                    alt={teacher.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xs sm:text-sm font-bold text-blue-900 mb-1 leading-tight">
+                  {teacher.name}
+                </h3>
+                <p className="text-gray-600 font-medium text-xs leading-tight">
+                  {teacher.subject}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
