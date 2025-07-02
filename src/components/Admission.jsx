@@ -1,10 +1,20 @@
+import { useState, useEffect } from 'react'
+
 export default function Admission() {
+  const [currentStep, setCurrentStep] = useState(0)
   const steps = [
     { step: '1', title: 'Submit Application', desc: 'Complete online application form' },
     { step: '2', title: 'School Tour', desc: 'Visit our campus and meet faculty' },
     { step: '3', title: 'Assessment', desc: 'Academic evaluation and interview' },
     { step: '4', title: 'Enrollment', desc: 'Complete registration process' }
   ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStep((prev) => (prev + 1) % steps.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section id="admission" className="section section-gray">
@@ -16,16 +26,35 @@ export default function Admission() {
           </p>
         </div>
 
-        <div className="steps">
-          {steps.map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="step-number">
-                {item.step}
-              </div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+        <div className="mb-8">
+          <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentStep * 100}%)` }}
+            >
+              {steps.map((item, index) => (
+                <div key={index} className="w-full flex-shrink-0 p-8 text-center">
+                  <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    {item.step}
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          
+          <div className="flex justify-center mt-4 space-x-2">
+            {steps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentStep(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentStep ? 'bg-blue-900 scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-2">
