@@ -20,7 +20,28 @@ export default function Staff() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 lg:space-y-0 desktop-grid-container">
+          <div className="hidden lg:grid desktop-staff-grid">
+            {teachers.map((teacher, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm desktop-card">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-lg overflow-hidden border-2 border-blue-900">
+                  <img 
+                    src={teacher.image} 
+                    alt={teacher.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2 leading-tight">
+                  {teacher.name}
+                </h3>
+                <p className="text-gray-600 font-medium text-sm leading-tight">
+                  {teacher.subject}
+                </p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="lg:hidden">
           <div className="grid grid-cols-2 gap-4">
             {teachers.slice(0, 2).map((teacher, index) => (
               <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
@@ -99,6 +120,7 @@ export default function Staff() {
                 </p>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </div>

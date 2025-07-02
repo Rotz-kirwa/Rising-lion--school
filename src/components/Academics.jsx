@@ -18,7 +18,18 @@ export default function Academics() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 lg:space-y-0 desktop-grid-container">
+          <div className="hidden lg:grid desktop-academic-grid">
+            {programs.map((program, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm desktop-card">
+                <div className="text-5xl mb-4">{program.icon}</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">{program.title}</h3>
+                <p className="text-base text-gray-600 leading-relaxed">{program.desc}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="lg:hidden">
           <div className="grid grid-cols-2 gap-4">
             {programs.slice(0, 2).map((program, index) => (
               <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
@@ -66,6 +77,7 @@ export default function Academics() {
               <div style={{fontSize: '24px', fontWeight: 'bold'}}>Average AP Score: 4.2</div>
               <div style={{color: '#bfdbfe'}}>Above National Average</div>
             </div>
+          </div>
           </div>
         </div>
       </div>

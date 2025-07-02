@@ -41,6 +41,53 @@ body {
   }
 }
 
+/* Desktop-Specific Enhanced Layouts */
+@media (min-width: 1024px) {
+  /* Staff Section - 4 columns on desktop */
+  .desktop-staff-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 32px !important;
+  }
+  
+  /* Campus Tour - 6 columns on desktop */
+  .desktop-tour-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 24px !important;
+  }
+  
+  /* Academic Programs - 3 columns on desktop */
+  .desktop-academic-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 32px !important;
+  }
+  
+  /* Core Values - 5 columns on desktop */
+  .desktop-values-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 24px !important;
+  }
+  
+  /* Remove space-y on desktop for grid layouts */
+  .desktop-grid-container .space-y-4 > * + * {
+    margin-top: 0 !important;
+  }
+  
+  /* Enhanced desktop cards */
+  .desktop-card {
+    padding: 32px !important;
+    border-radius: 16px !important;
+  }
+  
+  .desktop-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

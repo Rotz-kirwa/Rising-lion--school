@@ -23,7 +23,30 @@ export default function Tour() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 lg:space-y-0 desktop-grid-container">
+          <div className="hidden lg:grid desktop-tour-grid">
+            {facilities.map((facility, index) => (
+              <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm desktop-card">
+                <div className="relative mb-3">
+                  <div className="w-24 h-24 mx-auto rounded-lg overflow-hidden border-2 border-blue-900">
+                    <img 
+                      src={facility.image} 
+                      alt={facility.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full w-6 h-6 flex items-center justify-center text-xs border border-white">
+                    {facility.icon}
+                  </div>
+                </div>
+                <h3 className="text-sm font-bold text-blue-900 leading-tight">
+                  {facility.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+          
+          <div className="lg:hidden">
           {Array.from({ length: Math.ceil(facilities.length / 2) }, (_, rowIndex) => (
             <div key={rowIndex} className="grid grid-cols-2 gap-4">
               {facilities.slice(rowIndex * 2, rowIndex * 2 + 2).map((facility, index) => (
@@ -47,6 +70,7 @@ export default function Tour() {
               ))}
             </div>
           ))}
+          </div>
         </div>
 
         <div className="text-center" style={{marginTop: '48px'}}>
