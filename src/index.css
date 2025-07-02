@@ -25,6 +25,22 @@ body {
   overflow-x: hidden;
 }
 
+/* Mobile-Specific 2-Per-Row Layout */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  
+  .space-y-4 .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .space-y-4 > * + * {
+    margin-top: 16px !important;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
